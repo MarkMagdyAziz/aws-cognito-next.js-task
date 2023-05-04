@@ -34,15 +34,15 @@ const AuthProvider = ({children}) => {
   const [attrInfo, setAttrInfo] = useState([])
 
     useEffect(() => {
-      console.log('useEffect')
         async function getSessionInfo() {
           try {
             const session = await getSession()
+            console.log('5 got the session',session )
+
             setSessionInfo({
               accessToken: session.accessToken.jwtToken,
               refreshToken: session.refreshToken.token,
             })
-            console.log(session)
             window.localStorage.setItem('accessToken', `${session.accessToken.jwtToken}`)
             window.localStorage.setItem('refreshToken', `${session.refreshToken.token}`)
             await setAttribute({ Name: 'website', Value: 'https://github.com/MarkMagdyAziz' })
@@ -64,12 +64,12 @@ const AuthProvider = ({children}) => {
       }
 
   async function signInWithEmail(username, password) {
-
+    cognito.signInWithEmail(username, password)
     try {
 
       await cognito.signInWithEmail(username, password)
-
       setAuthStatus(AUTH_STATUS.SignedIn)
+
     } catch(err) {
       setAuthStatus(AUTH_STATUS.SignedOut)
       throw err
@@ -100,10 +100,17 @@ const AuthProvider = ({children}) => {
   }
 
   async function getSession() {
+    console.log('1 getSession')
+    const session = await cognito.getSession()
+    console.log('2 session',session )
+
     try {
       const session = await cognito.getSession()
+      console.log('3 session in the try',session )
+
       return session
     } catch (err) {
+      console.log('4 catched err in the try',session )
       throw err
     }
   }
