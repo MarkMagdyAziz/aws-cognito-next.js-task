@@ -73,8 +73,10 @@ const LoginPage = () => {
   return (
     <Container>
       <Row className='d-flex justify-content-center'>
-        <Col xs={12} md={8}>
-          <Form  method="post" onSubmit={submitHandler} >
+        <h1 className='text-center'> Sign In </h1>
+
+        <Col xs={12} md={6}>
+          <Form method="post" onSubmit={submitHandler} >
             <Form.Group className="mb-3" controlId="username">
               <Form.Label>Username</Form.Label>
               <Form.Control onChange={controlsHandler} value={username} type="text" name="username" placeholder="Enter Useername name@example.com" />

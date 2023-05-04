@@ -160,7 +160,8 @@ const SingUpPage = () => {
   return (
     <Container>
       <Row className='d-flex justify-content-center'>
-        <Col xs={12} md={8}>
+      <h1 className='text-center'> Sing Up </h1>
+        <Col xs={12} md={6}>
           <Form  method="post" onSubmit={submitHandler} >
             <Form.Group className="mb-3" controlId="email">
               <Form.Label>Email</Form.Label>
@@ -212,6 +213,7 @@ const SingUpPage = () => {
             <Button variant="primary" type="submit">
               SignUp
             </Button>
+            <br/><br/>
           </Form>
         </Col>
       </Row>

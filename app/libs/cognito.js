@@ -28,12 +28,17 @@ export async function getSession () {
   if(!currentUser) {
     currentUser = userPool.getCurrentUser()
   }
+    const se = currentUser.getSession()
+    console.log('2 session current user',se)
+
 
   return new Promise(function(resolve, reject) {
+
     currentUser.getSession(function(err, session) {
       console.log('2 getSession', currentUser)
 
       if(err) {
+        //NOTE - fire err
         console.log('3 resolve getSession', err)
 
         reject(err)
@@ -106,7 +111,7 @@ export async function signInWithEmail (username, password) {
       Password: password,
     }
     const authenticationDetails = new AuthenticationDetails(authenticationData)
-
+    console.log('auth data')
     currentUser = getCognitoUser(username)
     currentUser.authenticateUser(authenticationDetails, {
       onSuccess: function(res) {
@@ -183,25 +188,25 @@ export async function sendCode (username) {
     throw err
   })
 }
-export async function forgotPassword (username, code, password) {
-  return new Promise(function(resolve, reject) {
-    const cognitoUser = getCognitoUser(username)
+// export async function forgotPassword (username, code, password) {
+//   return new Promise(function(resolve, reject) {
+//     const cognitoUser = getCognitoUser(username)
 
-    if(!cognitoUser) {
-      reject(`could not find ${ username }`)
-      return
-    }
+//     if(!cognitoUser) {
+//       reject(`could not find ${ username }`)
+//       return
+//     }
 
-    cognitoUser.confirmPassword(code, password, {
-      onSuccess: function() {
-        resolve('password updated')
-      },
-      onFailure: function(err) {
-        reject(err)
-      },
-    })
-  })
-}
+//     cognitoUser.confirmPassword(code, password, {
+//       onSuccess: function() {
+//         resolve('password updated')
+//       },
+//       onFailure: function(err) {
+//         reject(err)
+//       },
+//     })
+//   })
+// }
 
 export async function changePassword (oldPassword, newPassword) {
   return new Promise(function(resolve, reject) {
