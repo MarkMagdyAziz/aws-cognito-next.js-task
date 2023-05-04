@@ -80,7 +80,7 @@ const ChangePassword = () => {
     )
 
     const updatePassword = (
-        <Col xs={12} md={8}>
+        <Col xs={12} md={6}>
             <Form method="post" onSubmit={onSubmitChangePassword} >
                 <Form.Group className="mb-3" controlId="password">
                     <Form.Label>Old Password</Form.Label>

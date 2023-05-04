@@ -67,7 +67,7 @@ const LoginPage = () => {
   return (
     <Container>
       <Row className='d-flex justify-content-center'>
-        <Col xs={12} md={8}>
+        <Col xs={12} md={6}>
           <Form  method="post" onSubmit={submitCodeHandler} >
             <Form.Group className="mb-3" controlId="username">
               <Form.Label>Username</Form.Label>
