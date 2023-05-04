@@ -3,7 +3,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ### AWS Cognito Next.js
 
 This is a Next.js application that uses AWS Cognito for user authentication and authorization.
+## Live deployment
+Check out the live deployment of our Next.js app at
+<a href="https://deploy-preview-5--remarkable-chimera-37a6a8.netlify.app/signup">https://deploy-preview-5--remarkable-chimera-37a6a8.netlify.app/signup</a>
 
+<a href="https://aws-cognito-next-js-task-7h5c-markmagdyaziz.vercel.app/">https://aws-cognito-next-js-task-7h5c-markmagdyaziz.vercel.app/</a>
 ## Overview
 This application includes the following pages:
 * /: The main page of the application.
@@ -43,10 +47,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.js`.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -56,8 +56,3 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
