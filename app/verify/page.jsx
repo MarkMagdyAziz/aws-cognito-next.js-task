@@ -55,7 +55,7 @@ const LoginPage = () => {
     try {
       setLoading(true)
       await authContext.verifyCode(username, code)
-      router.push('/')
+      router.push('/login')
     } catch(err) {
       setLoading(false)
       setErrors(prevState => ({...prevState, auth: err.message}));

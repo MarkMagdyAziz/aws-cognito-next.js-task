@@ -6,7 +6,7 @@ import LoadingPage from './loader';
 
 export const metadata = {
   title: 'AWS Cognito Task',
-  description: 'AWS Cognito Identity Pools and  ',
+  description: 'AWS Cognito Identity Pools',
 }
 
 export default function RootLayout({ children }) {
