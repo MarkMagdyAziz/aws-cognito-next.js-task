@@ -1,6 +1,7 @@
 import {Suspense} from 'react';
 import Header from './components/Header';
 import AuthProvider from './contexts/auth.context';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css'
 import LoadingPage from './loader';
 
