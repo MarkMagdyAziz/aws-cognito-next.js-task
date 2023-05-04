@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 999.99,
+      "description": "A portable computer with a 15-inch screen and a long battery life.",
+      "category": "Electronics",
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "name": "Shoes",
+      "price": 49.99,
+      "description": "A pair of comfortable sneakers with a breathable mesh fabric and a rubber sole.",
+      "category": "Clothing",
+      "rating": 4.2
+    },
+    {
+      "id": 3,
+      "name": "Book",
+      "price": 19.99,
+      "description": "A hardcover novel by a bestselling author with a thrilling plot and engaging characters.",
+      "category": "Books",
+      "rating": 4.7
+    },
+    {
+        "id": 4,
+        "name": "Coffee",
+        "price": 4.99,
+        "description": "A bag of roasted coffee beans with a rich aroma and a smooth flavor.",
+        "category": "Food",
+        "rating": 4.3
+      },
+      {
+        "id": 5,
+        "name": "Watch",
+        "price": 199.99,
+        "description": "A stylish wristwatch with a stainless steel case and a leather strap.",
+        "category": "Accessories",
+        "rating": 4.6
+      },
+      {
+        "id": 6,
+        "name": "Headphones",
+        "price": 59.99,
+        "description": "A pair of wireless headphones with a noise-canceling feature and a high-quality sound.",
+        "category": "Electronics",
+        "rating": 4.4
+      }
+  ]
