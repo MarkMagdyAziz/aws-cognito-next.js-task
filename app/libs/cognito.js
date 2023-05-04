@@ -111,17 +111,22 @@ export async function signInWithEmail (username, password) {
       Password: password,
     }
     const authenticationDetails = new AuthenticationDetails(authenticationData)
-    console.log('auth data')
     currentUser = getCognitoUser(username)
     currentUser.authenticateUser(authenticationDetails, {
       onSuccess: function(res) {
+        console.log('res auth data',authenticationDetails)
+
         resolve(res)
       },
       onFailure: function(err) {
+        console.log('failure auth data',authenticationDetails)
+
         reject(err)
       },
       mfaRequired: function(res) {
         // TODO: handle first login
+        console.log('mfaRequired auth data',res)
+
         resolve(res)
       },
     })
