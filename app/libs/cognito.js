@@ -28,10 +28,6 @@ export async function getSession () {
   if(!currentUser) {
     currentUser = userPool.getCurrentUser()
   }
-    const se = currentUser.getSession()
-    console.log('2 session current user',se)
-
-
   return new Promise(function(resolve, reject) {
 
     currentUser.getSession(function(err, session) {
@@ -114,20 +110,14 @@ export async function signInWithEmail (username, password) {
     currentUser = getCognitoUser(username)
     currentUser.authenticateUser(authenticationDetails, {
       onSuccess: function(res) {
-        console.log('res auth data',authenticationDetails)
-
         resolve(res)
       },
       onFailure: function(err) {
-        console.log('failure auth data',authenticationDetails)
-
         reject(err)
       },
-      mfaRequired: function(res) {
-        // TODO: handle first login
-        console.log('mfaRequired auth data',res)
-
-        resolve(res)
+      mfaRequired: function(codeDeliveryDetails) {
+        let verificationCode = prompt('Please input verification code', '');
+        currentUser.sendMFACode(verificationCode, this);
       },
     })
   }).catch((err) => {
