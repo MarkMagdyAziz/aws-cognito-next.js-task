@@ -3,8 +3,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ### AWS Cognito Next.js
 
 This is a Next.js application that uses AWS Cognito for user authentication and authorization.
-## Live deployment
-Check out the live deployment of our Next.js app at
+## Check out the live deployment
+
 <a href="https://deploy-preview-5--remarkable-chimera-37a6a8.netlify.app/signup">https://deploy-preview-5--remarkable-chimera-37a6a8.netlify.app/signup</a>
 
 <a href="https://aws-cognito-next-js-task-7h5c-markmagdyaziz.vercel.app/">https://aws-cognito-next-js-task-7h5c-markmagdyaziz.vercel.app/</a>
